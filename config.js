@@ -7,6 +7,6 @@ module.exports = {
   AWS_ACCESS_KEY_ID: "AKIAIOSFODNN7EXAMPLE",
   aws_secret_access_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
   cors: {
-    origin: "*",
+    origin: process.env.ALLOWED_ORIGINS?.split(",") ?? [],
   },
 };
