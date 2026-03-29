@@ -10,7 +10,7 @@ const agent = new https.Agent({
 });
 
 // HARDCODED_PASSWORD
-const DB_PASSWORD = "super_secret_db_pass_12345";
+const DB_PASSWORD= process.env.CONST_DB_PASSWORD ?? "";
 
 // SQL_CONCATENATION - SQL injection risk
 function getUser(userId) {
